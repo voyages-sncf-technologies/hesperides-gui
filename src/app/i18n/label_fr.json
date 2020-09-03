@@ -281,7 +281,7 @@
   "properties.platform.globalProperties.compare.modal.title": "Choisir la plateforme \u00e0 laquelle comparer les propri\u00e9t\u00e9s globales de",
   "properties.platform.globalProperties.edit": "Editer les propri\u00e9t\u00e9s globales",
   "properties.platform.globalProperties.save": "Sauver les propri\u00e9t\u00e9s globales",
-  "properties.platform.globalProperties.used_in": "Utilis\u00e9e dans",
+  "properties.platform.globalProperties.used_in": "Propriété globale utilis\u00e9e dans {{usageCount}} module(s)",
   "properties.platform.hide.all": "Cacher les plateformes",
   "properties.platform.localChange.pending": "Changements locaux en attente",
   "properties.platform.prodFlagMissing": "Le nom de votre plateforme d\u00e9bute par PRD : il est recommand\u00e9 de l'identifier comme une plateforme de production",

@@ -281,7 +281,7 @@
   "properties.platform.globalProperties.compare.modal.title": "Choose the platform to compare global properties from",
   "properties.platform.globalProperties.edit": "Edit the global properties",
   "properties.platform.globalProperties.save": "Save the global properties",
-  "properties.platform.globalProperties.used_in": "Used in",
+  "properties.platform.globalProperties.used_in": "Global property used in {{usageCount}} module(s)",
   "properties.platform.hide.all": "Hide platforms",
   "properties.platform.localChange.pending": "Local changes pending",
   "properties.platform.prodFlagMissing": "The name of your platform starts with PRD: it is advised that you flag it as a production platform",

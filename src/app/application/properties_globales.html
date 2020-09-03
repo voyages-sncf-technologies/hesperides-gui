@@ -73,12 +73,21 @@
                                         <span id="properties-globales_zoom-{{key_value_property.name}}" flex class="ng-scope zoom-in-property-icon"
                                               ng-class="zoomInGlobalProperties ? 'fa fa-compress' : 'fa fa-expand'"
                                               ng-click="zoomInGlobalProperties = !zoomInGlobalProperties"
-                                              ng-show="(globalPropertiesUsage[key_value_property.name] | filter : {inModel:'true'}).length">
+                                              ng-show="getGlobalPropertyUsageCount(key_value_property)">
                                         </span>
                                     </div>
                                 </div>
                                 <div flex="30">
-                                    <span ng-show="zoomInGlobalProperties" ng-bind="'properties.platform.globalProperties.used_in' | translate"></span>
+                                    <div layout="column" layout-wrap>
+                                        <span ng-show="getGlobalPropertyUsageCount(key_value_property)">
+                                            {{ getGlobalPropertyUsageCount(key_value_property) }}
+                                            <i class="fa fa-info-circle">
+                                                <md-tooltip md-direction="top">
+                                                    {{ 'properties.platform.globalProperties.used_in' | translate : { usageCount: getGlobalPropertyUsageCount(key_value_property) } }}
+                                                </md-tooltip>
+                                            </i>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div flex="60">
                                     <div class="truncate-ellipsis">
@@ -102,7 +111,7 @@
                                        class="property-value">
                         </div>
                     </div>
-                    <div ng-show="zoomInGlobalProperties && (globalPropertiesUsage[key_value_property.name] | filter : {inModel:'true'}).length">
+                    <div ng-show="zoomInGlobalProperties && getGlobalPropertyUsageCount(key_value_property)">
                         <md-list flex="auto"class="global-property-usage">
                             <md-list-item ng-repeat="usage in (globalPropertiesUsage[key_value_property.name] | filter : {inModel:'true'}) track by $index">
                                 <div class="truncate-ellipsis">

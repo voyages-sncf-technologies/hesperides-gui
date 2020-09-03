@@ -578,6 +578,9 @@ angular.module('hesperides.application', [])
                     .then(function (globalPropertiesUsage) {
                         scope.globalPropertiesUsage = globalPropertiesUsage;
                     });
+                scope.getGlobalPropertyUsageCount = function (key) {
+                    return scope.globalPropertiesUsage[key.name].filter((property) => property.inModel).length;
+                };
             },
         };
     })
